@@ -1,20 +1,34 @@
 import './App.css';
-import githubIcon from './images/githubIcon.png'
+import githubIcon from './images/githubIcon.png';
+import { Routes, Route, Link } from "react-router-dom";
+//import of components 
+import About  from './components/About.js';
+import Home  from './components/Home.js';
+import Contact from './components/Contact';
+
 
 function App() {
   return (
     <div className="App">
-      <div className='WordsIsAllYouNeedLogo'>
-        <h1>WordsIsAllYouNeed</h1>
-      </div>
+      <header>
+        <div className='WordsIsAllYouNeedLogo'>
+          <h1>WordsIsAllYouNeed</h1>
+          <nav>
+            <ul>
+              <li><a href='/about'>About</a></li>
+              <li><a href='/contact'>Contact</a></li>
+              <li><a href='/'>Home</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
       <div className='WordsIsAllYouNeedBody'>
-        <div class="sections">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>  
-        </div>
-
+        <Routes>
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="/" element={<Home />} />
+        </Routes>        
       </div>
 
       <div className='WordsIsAllYouNeedFooter'>
@@ -32,5 +46,8 @@ function App() {
     </div>
   );
 }
+
+
+
 
 export default App;

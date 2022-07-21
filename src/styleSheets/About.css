@@ -1,0 +1,14 @@
+.aboutContainer{
+    text-align: center;
+    font-weight: bold;
+    width:100%;
+    font-size: 25px;
+    padding:40px;
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+
+.imageContainer{
+    margin-top: 20px;
+    justify-content: center;
+}
