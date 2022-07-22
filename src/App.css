@@ -1,0 +1,76 @@
+
+
+.WordsIsAllYouNeedLogo{
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: right;
+  margin-right: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+.WordsIsAllYouNeedBody{
+  width: 100%;
+  height: 895px;
+  display:flex;
+  justify-content: center;
+}
+
+.WordsIsAllYouNeedFooter{
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  height:60px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.githubIcon{
+  height:30px;
+  width: 30px;
+}
+
+.FooterTextCopyRight{
+  color:white;
+  font-style:'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 15px;
+}
+
+
+
