@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styleSheets/UseCase.css';
+import arrowIcon from '../images/arrowIcon.png';
+
 
 //UseCase component
 function UseCase (props){
@@ -15,6 +17,14 @@ function UseCase (props){
             <strong>{props.nameUseCase}</strong>
             </p>
           <p className='textUseCase'>{props.textUseCase}</p>
+        </div>
+        <div className='linkContainer'>
+            <p><a href={props.link} className="link">
+            <img 
+              src={arrowIcon}
+              alt='arrowIcon'
+              />  
+            </a></p> 
         </div>
     </div>
   );
