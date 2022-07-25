@@ -9,17 +9,20 @@ function Home(){
             nameUseCase='Chat bot'
             textUseCase='Try talking to our chatbot. Hopefully 
             it will give you a fun conversation!'
-            image='chatbot'/>
+            image='chatbot'
+            link="/chatbot"/>
           < UseCase
             nameUseCase='Translate'
             textUseCase='Tired of bad translations? Try translating
              your text into one of our available languages.'
-            image='translation'/>  
+            image='translation'
+            link="/translate"/>  
           < UseCase
             nameUseCase='Text correction'
             textUseCase='Do you want to have a perfectly written text? 
             Try using the functionality we provide!'
-            image='correction'/>
+            image='correction'
+            link="/textcorrection"/>
         </div>
     );
 }

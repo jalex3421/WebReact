@@ -1,10 +1,14 @@
 import './App.css';
 import githubIcon from './images/githubIcon.png';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 //import of components 
 import About  from './components/About.js';
 import Home  from './components/Home.js';
-import Contact from './components/Contact';
+import Contact from './components/Contact.js';
+import Chatbot from './components/Chatbot.js';
+import Translate from './components/Translate.js';
+import TextCorrection from './components/TextCorrection.js';
+
 
 
 function App() {
@@ -27,6 +31,9 @@ function App() {
         <Routes>
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="chatbot" element={<Chatbot />} />
+            <Route path="translate" element={<Translate />} />
+            <Route path="textcorrection" element={<TextCorrection />} />
             <Route path="/" element={<Home />} />
         </Routes>        
       </div>

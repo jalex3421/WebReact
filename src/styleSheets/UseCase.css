@@ -24,6 +24,18 @@
     line-height: 1.5rem;
 }
 
+.link{
+    color:black;
+    font-weight: bold;
+  }
+
+.linkContainer{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 .nameUseCase{
     font-size: 1.3 rem;
 }
