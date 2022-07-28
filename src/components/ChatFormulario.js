@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import '../styleSheets/ChatFormulario.css'
+
 function ChatFormulario(props){
     const [input,setInput] = useState('');
     const manejarCambio = e =>{
