@@ -7,7 +7,7 @@ import Home  from './components/Home.js';
 import Contact from './components/Contact.js';
 import Chatbot from './components/Chatbot.js';
 import Translate from './components/Translate.js';
-import TextCorrection from './components/TextCorrection.js';
+import Response from './components/Response.js';
 
 
 
@@ -33,7 +33,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="chatbot" element={<Chatbot />} />
             <Route path="translate" element={<Translate />} />
-            <Route path="textcorrection" element={<TextCorrection />} />
+            <Route path="response" element={<Response />} />
             <Route path="/" element={<Home />} />
         </Routes>        
       </div>

@@ -19,7 +19,7 @@ function ChatFormulario(props){
             <input
             className="chat-input"
             type="text"
-            placeholder="Write a message"
+            placeholder="Write a message..."
             name="texto"
             onChange={manejarCambio}
             />
