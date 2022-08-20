@@ -42,7 +42,7 @@ function ChatBot(){
                 {
                     mensajes.map( (msg) =>
                         <Mensaje mensaje = {msg} />
-                            
+         
                     )
                 }
             </div>

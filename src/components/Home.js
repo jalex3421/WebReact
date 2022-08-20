@@ -18,11 +18,10 @@ function Home(){
             image='translation'
             link="/translate"/>  
           < UseCase
-            nameUseCase='Text correction'
-            textUseCase='Do you want to have a perfectly written text? 
-            Try using the functionality we provide!'
-            image='correction'
-            link="/textcorrection"/>
+            nameUseCase='Q&A'
+            textUseCase='Are there questions that have you intrigued? Here are the answers!!'
+            image='response'
+            link="/response"/>
         </div>
     );
 }

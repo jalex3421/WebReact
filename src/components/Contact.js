@@ -10,8 +10,8 @@ function Contact(){
               < Card
                 image='Alejandro' 
                 name='Alejandro Meza Tudela'
-                bio="I'm very passionate in AI and Software development!!
-                Also I’m very passionate about learning different languages. Currently leaning Japanese." 
+                bio="I am very passionate about AI and software development!!
+                I also enjoy learning languages. Currently learning Japanese." 
                 linkedin="https://www.linkedin.com/in/alejandro-meza-tudela/"
               />
             </div>

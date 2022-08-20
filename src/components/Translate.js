@@ -25,13 +25,11 @@ function Translate(){
                 frequency_penalty: 0,
                 presence_penalty: 0,
               });
-            //const resp = "AI: "+ response.data.choices[0].text.split(":")[1]
             console.log(response);
             const resp = response.data.choices[0].text
             const aux = [mensaje, resp]
             const mensajesActualizados = [...mensajes,...aux];
             setMensajes(mensajesActualizados);
-    
         }
     };
 

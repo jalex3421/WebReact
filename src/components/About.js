@@ -20,7 +20,7 @@ function About(){
                     around us.</p>
                 <p> In order to achieve this, we offer three different 
                     services, such as: the possibility of translating text,
-                correcting your documents, and even having some fun talking 
+                Q&A, and even having some fun talking 
                 to a bot.</p> 
                 <p> We sincerely hope that you like the web, and that you 
                     give us the necessary support :)</p>     
