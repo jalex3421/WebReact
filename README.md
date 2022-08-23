@@ -14,6 +14,7 @@ The two creators of this project are people passionate about artificial intellig
 
 - React JS
 - GPT 3 API
+- Firebase (in order to deploy the app)
 
 ## DEMO
 https://www.youtube.com/watch?v=sM7lVAPV4dQ
