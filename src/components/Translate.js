@@ -1,14 +1,13 @@
 import React,{useState} from "react";
 import '../styleSheets/Translate.css';
 import TranslateForm from "./TranslateForm";
-import Mensaje from "./Mensaje";
+import Message from "./Message";
 
 function Translate(){
-    const [mensajes, setMensajes] = useState([]);
-    const agregarMensaje = async(mensaje, idioma) => {
-        console.log(mensaje)
-        if(mensaje.trim()) {
-            mensaje = mensaje.trim();
+    const [messages, setMessages] = useState([]);
+    const addTranslation = async(message, lenguage) => {
+        if(message.trim()) {
+            message = message.trim();
             const { Configuration, OpenAIApi } = require("openai");
 
             const configuration = new Configuration({
@@ -18,7 +17,7 @@ function Translate(){
 
             const response = await openai.createCompletion({
                 model: "text-davinci-002",
-                prompt: "Translate this into"+idioma+":\n\n"+mensaje+"\n\n",
+                prompt: "Translate this into"+lenguage+":\n\n"+message+"\n\n",
                 temperature: 0.3,
                 max_tokens: 100,
                 top_p: 1,
@@ -27,18 +26,18 @@ function Translate(){
               });
             console.log(response);
             const resp = response.data.choices[0].text
-            const aux = [mensaje, resp]
-            const mensajesActualizados = [...mensajes,...aux];
-            setMensajes(mensajesActualizados);
+            const aux = [message, resp]
+            const updatedMessages = [...messages,...aux];
+            setMessages(updatedMessages);
         }
     };
 
     return(
-        <>  <TranslateForm onSubmit= {agregarMensaje}/>
+        <>  <TranslateForm onSubmit= {addTranslation}/>
             <div type="text" className="translator">
                 {
-                    mensajes.map( (msg) =>
-                        <Mensaje mensaje = {msg} />
+                    messages.map( (msg) =>
+                        <Message message = {msg} />
                             
                     )
                 }

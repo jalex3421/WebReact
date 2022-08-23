@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import '../styleSheets/Response.css';
-import ChatFormulario from "./ChatFormulario";
-import Mensaje from "./Mensaje";
+import ChatForm from "./ChatForm";
+import Message from "./Message";
 
 function Response(props){
     const [messages, setMessages] = useState([]);
-    const agregarMensaje = async(message) => {
-        console.log(message)
+    const addResponse = async(message) => {
         if(message.trim()) {
             message = "Me: "+message.trim();
             const { Configuration, OpenAIApi } = require("openai");
@@ -36,11 +35,11 @@ function Response(props){
 
     return(
         <>  
-            <ChatFormulario onSubmit= {agregarMensaje}/>
+            <ChatForm onSubmit= {addResponse}/>
             <div className="chat">
                 {
                     messages.map( (msg) =>
-                        <Mensaje mensaje = {msg} />
+                        <Message message = {msg} />
                     )
                 }
             </div>
