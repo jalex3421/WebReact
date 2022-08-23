@@ -10,7 +10,7 @@ The two creators of this project are people passionate about artificial intellig
 - Offering the possibility to chat with a bot
 - Correcting written texts
 
-##DEMO
+## DEMO
 https://www.youtube.com/watch?v=sM7lVAPV4dQ
 
 
