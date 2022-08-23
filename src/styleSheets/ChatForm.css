@@ -1,4 +1,4 @@
-.chat-formulario{
+.chat-form{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -14,7 +14,7 @@
     border: 2px solid black;
     outline: none;
 }
-.chat-boton{
+.chat-button{
     padding: 16px;
     font-size: 18px;
     font-family: Roboto, sans-serif;
@@ -26,6 +26,6 @@
     color: #fff;
     text-transform: capitalize;
 }
-.chat-boton:hover{
+.chat-button:hover{
     background-color: grey;
 }

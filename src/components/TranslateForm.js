@@ -6,17 +6,17 @@ function TranslateForm(props){
     const [input,setInput] = useState('');
     const [leng, setLeng] = useState('French')
 
-    const manejarCambio = e =>{
+    const handleChange = e =>{
         console.log(e.target.value);
         setInput(e.target.value);
     }
 
-    const manejarEnvio = e => {
+    const handleSubmit = e => {
         e.preventDefault();
         props.onSubmit(input,leng);
       }
 
-    const manejarIdioma = e =>{
+    const handleLenguage = e =>{
         console.log(e.target.value);
         setLeng(e.target.value);
         
@@ -25,19 +25,19 @@ function TranslateForm(props){
     return(
         
             <form className="translator-form"
-                onSubmit={manejarEnvio}>
+                onSubmit={handleSubmit}>
                 <input
                     className="translator-input"
                     type="text"
                     placeholder="Write a message..."
-                    name="texto"
-                    onChange={manejarCambio}
+                    name="text"
+                    onChange={handleChange}
                 />
-                <button className="translator-boton">
+                <button className="translator-button">
                 Send Message
                 </button>
                 <div className="lang-selector">
-                    <select onChange={manejarIdioma} >
+                    <select onChange={handleLenguage} >
                         <option value="French">FRENCH</option>
                         <option value="Spanish">SPANISH</option>
                         <option value="English">ENGLISH</option>

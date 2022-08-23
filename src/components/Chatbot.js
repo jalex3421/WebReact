@@ -1,14 +1,13 @@
 import React,{useState} from "react";
 import '../styleSheets/ChatBot.css';
-import ChatFormulario from "./ChatFormulario";
-import Mensaje from "./Mensaje";
+import ChatForm from "./ChatForm";
+import Message from "./Message";
 
 function ChatBot(){
-    const [mensajes, setMensajes] = useState([]);
-    const agregarMensaje = async(mensaje) => {
-        console.log(mensaje)
-        if(mensaje.trim()) {
-            mensaje = "Me: "+mensaje.trim();
+    const [messages, setMessages] = useState([]);
+    const addMessages = async(message) => {
+        if(message.trim()) {
+            message = "Me: "+message.trim();
             const { Configuration, OpenAIApi } = require("openai");
 
             const configuration = new Configuration({
@@ -18,7 +17,7 @@ function ChatBot(){
 
             const response = await openai.createCompletion({
                 model: "text-davinci-002",
-                prompt: "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman:"+mensaje+"\n",
+                prompt: "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman:"+message+"\n",
                 temperature: 0.9,
                 max_tokens: 150,
                 top_p: 1,
@@ -26,22 +25,21 @@ function ChatBot(){
                 presence_penalty: 0.6,
                 stop: [" Human:", " AI:"],
             });
-            //const resp = "AI: "+ response.data.choices[0].text.split(":")[1]
             const resp = response.data.choices[0].text
-            const aux = [mensaje, resp]
-            const mensajesActualizados = [...mensajes,...aux];
-            setMensajes(mensajesActualizados);
+            const aux = [message, resp]
+            const updatedMessages = [...messages,...aux];
+            setMessages(updatedMessages);
     
         }
     };
 
     return(
         <>  
-            <ChatFormulario onSubmit= {agregarMensaje}/>
+            <ChatForm onSubmit= {addMessages}/>
             <div className="chat">
                 {
-                    mensajes.map( (msg) =>
-                        <Mensaje mensaje = {msg} />
+                    messages.map( (msg) =>
+                        <Message message = {msg} />
          
                     )
                 }

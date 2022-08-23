@@ -1,29 +1,29 @@
 import React, {useState} from "react";
-import '../styleSheets/ChatFormulario.css'
+import '../styleSheets/ChatForm.css'
 
 function ChatFormulario(props){
     const [input,setInput] = useState('');
-    const manejarCambio = e =>{
+    const handleChange = e =>{
         console.log(e.target.value);
         setInput(e.target.value);
     }
 
-    const manejarEnvio = e => {
+    const handleSubmit = e => {
         e.preventDefault();
         props.onSubmit(input);
       }
 
     return(
-        <form className="chat-formulario"
-              onSubmit={manejarEnvio}>
+        <form className="chat-form"
+              onSubmit={handleSubmit}>
             <input
             className="chat-input"
             type="text"
             placeholder="Write a message..."
-            name="texto"
-            onChange={manejarCambio}
+            name="text"
+            onChange={handleChange}
             />
-            <button className="chat-boton">
+            <button className="chat-button">
             send message
             </button>
         </form>
