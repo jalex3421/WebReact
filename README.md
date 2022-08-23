@@ -8,7 +8,7 @@ The two creators of this project are people passionate about artificial intellig
 
 - Translate texts
 - Offering the possibility to chat with a bot
-- Correcting written texts
+- Q&A
 
 ## DEMO
 https://www.youtube.com/watch?v=sM7lVAPV4dQ
