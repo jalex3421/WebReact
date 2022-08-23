@@ -10,11 +10,16 @@ The two creators of this project are people passionate about artificial intellig
 - Offering the possibility to chat with a bot
 - Q&A
 
+## Technology
+
+- React JS
+- GPT 3 API
+
 ## DEMO
 https://www.youtube.com/watch?v=sM7lVAPV4dQ
 
 
 ## Authors
 
-- Iñaki Luque Pastor
-- Alejandro Meza Tudela
+- Iñaki Luque Pastor: https://www.linkedin.com/in/i%C3%B1aki-luque-pastor-7b015223a/
+- Alejandro Meza Tudela: https://www.linkedin.com/in/alejandro-meza-tudela/
